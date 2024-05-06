@@ -5,12 +5,15 @@ import Menu from './Menu';
 import Order from './Order';
 import Reservations from './Reservations';
 import Home from './Home';
+import Header from './components/Header';
+
 
 
 function App() {
   return (
     <>
     <BrowserRouter>
+    <Header />
       <Routes>
         <Route index element={<Home />} />
         <Route path="/home" element={<Home />} />

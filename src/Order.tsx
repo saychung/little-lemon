@@ -1,9 +1,7 @@
-import Header from './components/Header'
-
 const Order = () => {
   return (
     <>
-      <Header />
+      This is the order page
     </>
   )
 }

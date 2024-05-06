@@ -1,9 +1,7 @@
-import Header from './components/Header'
-
 const Menu = () => {
   return (
     <>
-      <Header />
+      This is the menu page
     </>
   )
 }

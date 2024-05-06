@@ -1,10 +1,7 @@
-import React from 'react'
-import Header from './components/Header'
-
 const AboutLittleLemon = () => {
   return (
     <>
-    <Header />
+    This is the about page
     </>
   )
 }

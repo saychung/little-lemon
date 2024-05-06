@@ -1,49 +1,18 @@
-import { colorScheme } from "./colorscheme"
+import { Link } from "react-router-dom"
 
 const Hero = () => {
-    const pageStyle = {
-        heroHeading: {
-            fontSize: "60px",
-            color: colorScheme.csYellow,
-            marginTop: "40px",
-            marginBottom: "0",
-
-        },
-        heroSubHeading: {
-            fontSize: "30px",
-            margin: "0px"
-        },
-        heroDescription: {
-            fontSize: "20px",
-            width: '320px',
-            margin: '0',
-            marginTop: "20px",
-            marginBottom: '20px'
-        },
-        heroButton: {
-            margin: "0",
-            fontSize: '20px',
-            fontFamily: 'Markazi Text',
-            borderRadius: "12px",
-            border: 'none',
-            padding: '5px',
-            paddingLeft: '20px',
-            paddingRight: '20px',
-            backgroundColor: colorScheme.csYellow,
-        }
-    }
   return (
     <>
-        <article style={{height: "270px", backgroundColor: colorScheme.csGreen}}>
-            <div style={{display:"flex", justifyContent: "center", gap: '200px'}}>
-            <section id="heroText" style={{width:"", color: colorScheme.csGrey, lineHeight:"0.93", fontFamily: 'Markazi Text'}}>
-                <h1 style={{...pageStyle.heroHeading, textWrap: 'nowrap'}}>Little Lemon</h1>
-                <h6 style={pageStyle.heroSubHeading}>Chicago</h6>
-                <p style={pageStyle.heroDescription}>We are a family owned Mediterranean restaurant, focused on traditional recipes served with a mordern twist.</p>
-                <button style={pageStyle.heroButton}>Reserve a Table</button>
+        <article className="heroArticle">
+            <div  className="heroContents">
+            <section className="heroTextSection Markazi">
+                <h1  className="heroHeading">Little Lemon</h1>
+                <h4 className = "heroSubHeading">Chicago</h4>
+                <p className={"heroDescription Karla"}>We are a family owned Mediterranean restaurant, focused on traditional recipes served with a mordern twist.</p>
+                <Link to="/reservations" className="heroButton :hover Karla">Reserve a Table</Link>
             </section>
-            <section id="heroImage" style={{marginTop: "20px"}}>
-                <img src="./assets/restauranfood.jpg" alt="Sushie on a charcuterie board" width={280} height={295} style={{borderRadius: "16px"}}/>
+            <section className="heroImageSection">
+                <img src="./assets/restauranfood.jpg" alt="Sushie on a charcuterie board" width={280} height={295} className="heroImage" />
             </section>
             </div>
         </article>

@@ -1,9 +1,7 @@
-import Header from './components/Header'
-
 const Reservations = () => {
   return (
     <>
-      <Header />
+      This is the Reservation page
     </>
   )
 }

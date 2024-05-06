@@ -1,6 +1,5 @@
 import { colorScheme } from "./colorscheme"
 
-/* eslint-disable array-callback-return */
 const Testimonials = () => {
     const testimonialData = [
         {
@@ -31,25 +30,28 @@ const Testimonials = () => {
     const ratingStar = [1,2,3,4,5]
   return (
     <>
-        <article id='testimonial' style={{backgroundColor: colorScheme.csGreen, padding: '40px 0 100px 0', margin: '0 0 100px 0'}}>
-            <section id='testimonialTitle' style={{textAlign: 'center', fontFamily: 'Markazi Text', fontSize: '24px', color: colorScheme.csGrey}}>
+        <article id='testimonial' className="testimonialBody">
+            <section id='testimonialTitle' className="Markazi testimonialBodyTitle">
                 <h1>Testimonials</h1>
             </section>
-            <section style={{display: 'flex', justifyContent: 'center', gap: '35px', marginTop: '40px', fontFamily: 'Karla'}} id='testiomonialCard'>
+            <section id='testiomonialCard' className="testimonialCardSection Karla">
                 {
                     testimonialData.map(item=>{
                         return (
-                            <div id='card' style={{width: '150px', backgroundColor: colorScheme.csPink, color: colorScheme.csBlack, padding: '10px 10px 30px 10px', borderRadius: '16px' }}>
-                                <div style={{display: 'flex', fontSize: '20px'}}>
+                            <div id='card' style={{width: '150px', backgroundColor: colorScheme.csGrey, color: colorScheme.csBlack, padding: '10px 10px 30px 10px', borderRadius: '16px' }}>
+                                <h3 style={{margin: '0', fontSize: '13px', display: 'grid', flexDirection: "column", justifyItems: 'center', gap: '10px'}}>
+                                    <img src={item.image} alt= {item.name} style={{height: '100px', width: '100px', borderRadius: '50px', objectFit: "cover"}}/>
+                                    {item.name}
+                                    </h3>
+                                <div style={{display: 'flex', fontSize: '20px', justifyContent: 'center'}}>
                                     {ratingStar.map(i=>{
                                     if(i <= item.rating){
-                                        return(<p style={{margin: '0',color: colorScheme.csGrey, WebkitTextStrokeWidth: '0.5px', WebkitTextStrokeColor: colorScheme.csBlack}}>*</p>)
+                                        return(<img src="/assets/star-full.svg" alt="full star" style={{height: '10px', width: '10px'}} />)
                                     }
                                     else{
-                                        return(<p style={{margin:'0',color: colorScheme.csBlack,WebkitTextStrokeWidth: '0.5px', WebkitTextStrokeColor: colorScheme.csGrey}}>*</p>)
+                                        return(<img src="/assets/star-empty.svg" alt="full star" style={{height: '10px', width: '10px'}} />)
                                     }
                                 })}</div>
-                                <h3 style={{margin: '0', fontSize: '13px', display: 'flex', alignItems: 'center', gap: '10px'}}><img src={item.image} alt= {item.name} style={{height: '80px', width: '75px', borderRadius: '10px'}}/>{item.name}</h3>
                                 <p style={{margin: '10px 0 0 0', fontSize: '14px'}}>{item.review}</p>
                             </div>
                         )
