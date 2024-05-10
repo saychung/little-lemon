@@ -22,7 +22,7 @@
     "yup": "^1.4.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "conc \"react-scripts start\" \"nodemon app.js\"",
     "dev": "conc \"react-scripts start\" \"nodemon app.js\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
