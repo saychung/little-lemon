@@ -1,10 +1,10 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import AboutLittleLemon from './About';
-import Login from './Login';
-import Menu from './Menu';
-import Order from './Order';
-import Reservations from './Reservations';
-import Home from './Home';
+import AboutLittleLemon from './pages/About';
+import Login from './pages/Login';
+import Menu from './pages/Menu';
+import Order from './pages/Order';
+import Reservations from './pages/Reservations';
+import Home from './pages/Home';
 import Header from './components/Header';
 
 
