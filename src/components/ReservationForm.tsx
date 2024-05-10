@@ -82,7 +82,7 @@ const ReservationForm: React.FC<ComponentProps> = ({refresh, setRefresh}) => {
     const key = `${values.date},${values.timeslot}`
       try {
         const object = {[key] : {...values}}
-        await fetch('http://localhost:5000', {
+        await fetch('https://little-lemon-server-61j1.onrender.com/', {    //replace the endpoint with https://localhost:5000 if you are in the local server
           method: 'POST',
           body: JSON.stringify(object)
         }
@@ -100,7 +100,7 @@ const ReservationForm: React.FC<ComponentProps> = ({refresh, setRefresh}) => {
 
   useEffect(()=>{
     try{
-      fetch("https://little-lemon-server-61j1.onrender.com/").then(async(res)=>{
+      fetch("https://little-lemon-server-61j1.onrender.com/").then(async(res)=>{    //replace the endpoint with https://localhost:5000 if you are in the local server
       return res.json()
     }).then((tables : any)=>{
       if(tables !== undefined){
