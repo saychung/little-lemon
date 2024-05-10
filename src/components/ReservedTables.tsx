@@ -1,5 +1,4 @@
-import { useContext, useEffect, useState } from "react"
-import { RefreshContext } from "./RefreshContext"
+import {  useEffect, useState } from "react"
 
 
 type ComponentProps = {
@@ -50,7 +49,6 @@ const ReservedTables :React.FC<ComponentProps> = ({refresh, setRefresh}) => {
           {!flag && <button className="btnBG" onClick={() => setFlag(!flag)}>Show Past Reservations</button>}
           {flag &&
             <>
-              <button onClick={handleRefresh} className="btnBG">Refresh</button>
               <button className="btnBG" onClick={() => setFlag(!flag)}>Hide Reservations</button>
               {infoKeys && infoValues && infoKeys.map((item: string, i: number) => {
                 return (
