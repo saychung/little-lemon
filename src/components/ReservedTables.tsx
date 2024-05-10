@@ -15,7 +15,7 @@ const ReservedTables :React.FC<ComponentProps> = ({refresh, setRefresh}) => {
     }
     const handleDelete = async (key: string) => {
         try {
-            const response = await fetch('http://localhost:5000/deleteSlot',{
+            const response = await fetch('https://little-lemon-server-61j1.onrender.com//deleteSlot',{
                 method: 'POST',
                 body: JSON.stringify(key)
               })
@@ -31,7 +31,7 @@ const ReservedTables :React.FC<ComponentProps> = ({refresh, setRefresh}) => {
 
     useEffect(()=>{
         try{
-          fetch("http://localhost:5000").then(async(res)=>{
+          fetch("https://little-lemon-server-61j1.onrender.com/").then(async(res)=>{
           return res.json()
         }).then((tables : any)=>{
           setInfoKeys(Object.keys(tables))

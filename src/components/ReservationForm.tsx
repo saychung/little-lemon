@@ -100,7 +100,7 @@ const ReservationForm: React.FC<ComponentProps> = ({refresh, setRefresh}) => {
 
   useEffect(()=>{
     try{
-      fetch("http://localhost:5000").then(async(res)=>{
+      fetch("https://little-lemon-server-61j1.onrender.com/").then(async(res)=>{
       return res.json()
     }).then((tables : any)=>{
       if(tables !== undefined){
